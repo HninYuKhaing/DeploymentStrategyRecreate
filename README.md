@@ -82,6 +82,10 @@ Key Features of Recreate Strategy
 - Suitable for scenarios where only one version of the application should run at a time.
 - Downtime during the deployment.
 
+YouTube Demo:
+---
+https://youtu.be/Wl26QaOnMh8
+
 
 
 
