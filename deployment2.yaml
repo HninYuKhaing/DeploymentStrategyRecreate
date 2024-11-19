@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: team4-app
+  namespace: team4
+spec:
+  replicas: 4
+  strategy:
+    type: Recreate 
+  selector: 
+    matchLabels:
+      app: team4-app
+  template: 
+    metadata:
+      labels:
+        app: team4-app
+    spec:
+      containers:
+      - name: echo-container
+        image: hashicorp/http-echo:0.2.3
+        ports:
+        - containerPort: 8080
+        args:
+          - "-text=feature available USD, SGD, JPY"
+          - -listen=:8080
